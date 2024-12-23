@@ -31,8 +31,8 @@ public class JavaSimpleCalculator implements ActionListener {
 	public JavaSimpleCalculator() {
 		
 		
-		// combobox of themes
-		String[] colors = {"Change Theme", "Joy", "Love", "Aqua", "Nature", "Vampire", "Dark", "Light"};
+	// combobox of themes
+	String[] colors = {"Change Theme", "Joy", "Love", "Aqua", "Nature", "Vampire", "Dark", "Light"};
         comboBoxColors = new JComboBox<String>(colors);
         
          
@@ -44,35 +44,35 @@ public class JavaSimpleCalculator implements ActionListener {
         
         // frame settings
         frame = new JFrame("Java Simple Calculator"); 
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //close window
-		frame.setSize(400, 570); // size
-		frame.setLayout(null); // type of Layout
-		frame.setLocationRelativeTo(null); // centralize program
-		frame.setResizable(false); // disable window resize
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //close window
+	frame.setSize(400, 570); // size
+	frame.setLayout(null); // type of Layout
+	frame.setLocationRelativeTo(null); // centralize program
+	frame.setResizable(false); // disable window resize
 		
-		// header panel settings
-		headerPanel = new JPanel();
-		headerPanel.setBounds(0,0, 400, 120); // coordinates and size
-		headerPanel.setBackground(Color.white); // color background
-		headerPanel.setLayout(null); // type of Layout
-		frame.add(headerPanel); // adding headerPanel to frame
+	// header panel settings
+	headerPanel = new JPanel();
+	headerPanel.setBounds(0,0, 400, 120); // coordinates and size
+	headerPanel.setBackground(Color.white); // color background
+	headerPanel.setLayout(null); // type of Layout
+	frame.add(headerPanel); // adding headerPanel to frame
 		
-		// body panel settings
-		bodyPanel = new JPanel();
-		bodyPanel.setBounds(0,110, 400, 450); // coordinates and size
-		bodyPanel.setBackground(Color.white); // color background
-		bodyPanel.setLayout(null); // type of Layout
-		frame.add(bodyPanel); // adding bodyPanel to frame
+	// body panel settings
+	bodyPanel = new JPanel();
+	bodyPanel.setBounds(0,110, 400, 450); // coordinates and size
+	bodyPanel.setBackground(Color.white); // color background
+	bodyPanel.setLayout(null); // type of Layout
+	frame.add(bodyPanel); // adding bodyPanel to frame
 		
-		// buttons panel settings
-		buttonsPanel = new JPanel();
-		buttonsPanel.setBounds(70,25, 250, 295); // coordinates and size
-		buttonsPanel.setBackground(Color.white); // color background
-		buttonsPanel.setLayout(null); // type of Layout
-		bodyPanel.add(buttonsPanel); // adding buttonsPanel to bodyPanel
+	// buttons panel settings
+	buttonsPanel = new JPanel();
+	buttonsPanel.setBounds(70,25, 250, 295); // coordinates and size
+	buttonsPanel.setBackground(Color.white); // color background
+	buttonsPanel.setLayout(null); // type of Layout
+	bodyPanel.add(buttonsPanel); // adding buttonsPanel to bodyPanel
 		
 		
-		 // visor textField
+	// visor textField
         visorTxtField = new JTextField();
         visorTxtField.setFont(fontType);
         visorTxtField.setEditable(false);
@@ -87,17 +87,17 @@ public class JavaSimpleCalculator implements ActionListener {
 		
 
 		
-		// creating and setting numberButtons
-		for(int i =0; i<10; i++) {
+	// creating and setting numberButtons
+	for(int i =0; i<10; i++) {
 
-			numberButtons[i] = new JButton(String.valueOf(i)); // create button and capture the number in the button and set its text
-			numberButtons[i].setFont(fontType); // set font type
-			numberButtons[i].setFocusable(false); // no focusable
-			numberButtons[i].setBackground(Color.pink); // buttons color
-			numberButtons[i].addActionListener(this); //action listener to the clicking event
-			buttonsPanel.add(numberButtons[i]); // add buttons to buttonsPanel
+		numberButtons[i] = new JButton(String.valueOf(i)); // create button and capture the number in the button and set its text
+		numberButtons[i].setFont(fontType); // set font type
+		numberButtons[i].setFocusable(false); // no focusable
+		numberButtons[i].setBackground(Color.pink); // buttons color
+		numberButtons[i].addActionListener(this); //action listener to the clicking event
+		buttonsPanel.add(numberButtons[i]); // add buttons to buttonsPanel
 
-		}
+	} // end for
 		
 		//functionButtons
 		addButton = new JButton("+");
@@ -176,19 +176,19 @@ public class JavaSimpleCalculator implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		// THEME COLOR EVENTS
-		// Changes the color of buttons, panels and text when theme is selected
+	// THEME COLOR EVENTS
+	// Changes the color of buttons, panels and text when theme is selected
 		
 		
-		// get the chosen item from comoBoxColor and sets it to a String
-		String selectedItem = (String) comboBoxColors.getSelectedItem(); 
+	// get the chosen item from comoBoxColor and sets it to a String
+	String selectedItem = (String) comboBoxColors.getSelectedItem(); 
 		
         // Aqua Theme - Cyan
         if (selectedItem.equals("Aqua")) {
         	for(int i =0; i<10; i++) { 
     			numberButtons[i].setBackground(Color.cyan);
     			numberButtons[i].setForeground(Color.black);
-    			}
+    		}
         	headerPanel.setBackground(Color.white);
         	bodyPanel.setBackground(Color.white);
         	buttonsPanel.setBackground(Color.white);
@@ -200,12 +200,12 @@ public class JavaSimpleCalculator implements ActionListener {
         	for(int i =0; i<10; i++) {
     			numberButtons[i].setBackground(Color.pink);
     			numberButtons[i].setForeground(Color.black);
-    			}
+    		}
         	headerPanel.setBackground(Color.white);
         	bodyPanel.setBackground(Color.white);
         	buttonsPanel.setBackground(Color.white);
         	title.setForeground(Color.black);
-        } 
+        	} 
         
         // Joy Theme - Orange
         if (selectedItem.equals("Joy")) {
@@ -217,7 +217,7 @@ public class JavaSimpleCalculator implements ActionListener {
         	bodyPanel.setBackground(Color.white);
         	buttonsPanel.setBackground(Color.white);
         	title.setForeground(Color.black);
-        }
+       	 	}
         
         // Nature Theme - Green
         if (selectedItem.equals("Nature")) {
@@ -229,7 +229,7 @@ public class JavaSimpleCalculator implements ActionListener {
         	bodyPanel.setBackground(Color.white);
         	buttonsPanel.setBackground(Color.white);
         	title.setForeground(Color.black);
-        }
+        	}
         
         // Vampire Theme - Red and Black
         if (selectedItem.equals("Vampire")) {
@@ -241,7 +241,7 @@ public class JavaSimpleCalculator implements ActionListener {
         	bodyPanel.setBackground(Color.black);
         	buttonsPanel.setBackground(Color.black);
         	title.setForeground(Color.red);
-        }
+	        }
         
         // Dark Theme - Black and Orange
         if (selectedItem.equals("Dark")) {
@@ -254,7 +254,7 @@ public class JavaSimpleCalculator implements ActionListener {
         	buttonsPanel.setBackground(Color.black);
         	title.setForeground(Color.orange);
         	
-        }
+       		}
         	
         if (selectedItem.equals("Light")) {
             for(int i =0; i<10; i++) {
@@ -269,107 +269,107 @@ public class JavaSimpleCalculator implements ActionListener {
         	
 
 		
-		// CALCULATOR EVENTS
+	// CALCULATOR EVENTS
         
-		//get the pressed number and set it to textField visor
-		for (int i = 0; i < 10; i++) {
+	//get the pressed number and set it to textField visor
+	for (int i = 0; i < 10; i++) {
 			
-			if(e.getSource() == numberButtons[i]) {
-				visorTxtField.setText(visorTxtField.getText().concat(String.valueOf(i)));
-				}
+		if(e.getSource() == numberButtons[i]) {
+			visorTxtField.setText(visorTxtField.getText().concat(String.valueOf(i)));
+			}
+		}
+				
+		//get the first number to set the addition		
+		if(e.getSource() == addButton) {
+			number1 = Double.parseDouble(visorTxtField.getText());
+			operator = '+';
+			visorTxtField.setText("");
 			}
 				
-			//get the first number to set the addition		
-			if(e.getSource() == addButton) {
-				number1 = Double.parseDouble(visorTxtField.getText());
-				operator = '+';
-				visorTxtField.setText("");
+		//get the first number to set the subtraction		
+		if(e.getSource() == subButton) {
+			number1 = Double.parseDouble(visorTxtField.getText());
+			operator = '-';
+			visorTxtField.setText("");
 			}
 				
-				//get the first number to set the subtraction		
-			if(e.getSource() == subButton) {
-				number1 = Double.parseDouble(visorTxtField.getText());
-				operator = '-';
-				visorTxtField.setText("");
-			}
+		//get the first number to set the multiplication		
+		if(e.getSource() == multButton) {
+			number1 = Double.parseDouble(visorTxtField.getText());
+			operator = '*';
+			visorTxtField.setText("");
+		}
 				
-			//get the first number to set the multiplication		
-			if(e.getSource() == multButton) {
-				number1 = Double.parseDouble(visorTxtField.getText());
-				operator = '*';
-				visorTxtField.setText("");
-			}
+		//get the first number to set the division
+		if(e.getSource() == divButton) {
+			number1 = Double.parseDouble(visorTxtField.getText());
+			operator = '/';
+			visorTxtField.setText("");
+		}
 				
-			//get the first number to set the division
-			if(e.getSource() == divButton) {
-				number1 = Double.parseDouble(visorTxtField.getText());
-				operator = '/';
-				visorTxtField.setText("");
-			}
-				
-			// equals sign event to do the calculation
-			if(e.getSource() == equalsButton) {
+		// equals sign event to do the calculation
+		if(e.getSource() == equalsButton) {
 					
-				// gets the second number
-				number2 = Double.parseDouble(visorTxtField.getText());
+			// gets the second number
+			number2 = Double.parseDouble(visorTxtField.getText());
 					
-					// do the calculation
-				switch(operator) {
+			// do the calculation
+			switch(operator) {
 					
-					// addition
-					case '+':
-						result = number1 + number2;
-						break;
+				// addition
+				case '+':
+					result = number1 + number2;
+					break;
 						
-					// subtraction
-					case '-':
-						result = number1 - number2;
-						break;
+				// subtraction
+				case '-':
+					result = number1 - number2;
+					break;
 						
-					// multiply	
-					case '*':
-						result = number1 * number2;
-						break;
+				// multiply	
+				case '*':
+					result = number1 * number2;
+					break;
 						
-					// division	
-					case '/':
-						result = number1 / number2;
-						break;
+				// division	
+				case '/':
+					result = number1 / number2;
+					break;
 
-					}
+				} // end switch
 					
-				// show result
-				visorTxtField.setText(String.valueOf(result));
-			}
+			// show result
+			visorTxtField.setText(String.valueOf(result));
+		}
 				
 			// clear button - clear the visor 
-			if(e.getSource() == clearButton) {
-				visorTxtField.setText("");
-				number1 = 0;
-				number2 = 0;	
-			}
+		if(e.getSource() == clearButton) {
+			visorTxtField.setText("");
+			number1 = 0;
+			number2 = 0;	
+		}
 				
-			// delete button - delete last number
-			if(e.getSource() == deleteButton) {
-				String string = visorTxtField.getText();
-				visorTxtField.setText("");
+		// delete button - delete last number
+		if(e.getSource() == deleteButton) {
+			String string = visorTxtField.getText();
+			visorTxtField.setText("");
 					
-				for (int i=0; i<string.length()-1; i++) {
-					visorTxtField.setText(visorTxtField.getText()+string.charAt(i)); //set the last text - 1 char 
+			for (int i=0; i<string.length()-1; i++) {
+				visorTxtField.setText(visorTxtField.getText()+string.charAt(i)); //set the last text - 1 char 
 					}	
-				}		
+				} // end delete button		
 				
-			// decimal sign
-			if(e.getSource() == decimalButton) {
-				visorTxtField.setText(visorTxtField.getText() + '.');
-			}
+		// decimal sign
+		if(e.getSource() == decimalButton) {
+			visorTxtField.setText(visorTxtField.getText() + '.');
+		}
 				
 				
-			// negative sign
-			if(e.getSource() == negativeButton) {
-				number1 = -1;
-				visorTxtField.setText("-");
-			}
+		// negative sign
+		if(e.getSource() == negativeButton) {
+			number1 = -1;
+			visorTxtField.setText("-");
+		}
 					
         } // end ActionPerformed
 	
