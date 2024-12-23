@@ -1,3 +1,4 @@
 # JavaSimpleCalculator
-A simple calculator made in Java with seven color themes
-![image](https://github.com/user-attachments/assets/621f2d7b-65da-480c-af67-b69d141361f1)
+A simple calculator made in Java with seven color themes <br> <br>
+
+![image](https://github.com/user-attachments/assets/21336010-4fb6-4235-ac7c-7d4d482debae)
