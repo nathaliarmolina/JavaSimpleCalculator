@@ -26,6 +26,17 @@ A simple calculator made in Java with seven color themes <br>
 ### Light
 ![image](https://github.com/user-attachments/assets/240305c6-c415-49e3-a66b-6050974aa3af)
 
+## Try On!
+
+You can download the game here and run it on your computer. No need to install the game if you have Java in your pc:
+
+### Jar File
+
+https://github.com/nathaliarmolina/JavaSimpleCalculator/blob/main/JavaSimpleCalculator.jar
+
+## Download Java
+https://www.java.com/pt-BR/download/manual.jsp
+
 
 
 
